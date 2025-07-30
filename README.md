@@ -40,9 +40,9 @@ The goal of this project:
 
 1. The accuration of machine learning predict the price of the rest of the house
 
-2. Rumah seperti apa yang ada di Iowa Real Estate.
+2. What kind of homes are available in Iowa Real Estate.
 
-3. Range harga rumah di Iowa Real Estate
+3. Home price ranges in Iowa Real Estate
 
 ## Data Sources
 
@@ -70,7 +70,7 @@ Because there are quite a lot of features in this dataset, filtering needs to be
 <img width = '600' height = '400' src = 'fig/highest correlation with SalePrice.png'>
 </p>
 
-- Gambar diatas merupakan hasil dari feature selection. Berdasarkan hasil dari proses filter ini, didapatkan beberapa fitur yang memiliki skor korelasi `pearson` yang kuat terhadap harga rumah yang diwakilkan oleh kolom **SalePrice** seperti kualitas secara keseluruhan (**OverallQual**), luas area tempat tiggal(**GrLivArea**), number of cars garage (**GarageCars**), luas tanah untuk garasi mobil (**GarageArea**), ..(**TotalBsmtSF**), ...(**1stFlrSF**), ...(**FullBath**), ....(**TotRmsAbvGrd**), ...(**YearBuilt**), and Tahun Rumah setelah Remodelling(**YearRemodAdd**). Proyek kali ini akan meninjau rumah dari dua sisi, segi harga dan ketersediaan.
+- The image above is the result of feature selection. Based on the results of this filtering process, several features were obtained that have a strong Pearson correlation score on house prices represented by the **SalePrice** column, such as overall quality (**OverallQual**), residential area (**GrLivArea**), number of cars garage (**GarageCars**), land area for car garage (**GarageArea**), basement area (**TotalBsmtSF**), first floor area (**1stFlrSF**), bathroom feature completeness (**FullBath**), number of rooms above ground (**TotRmsAbvGrd**), year built (**YearBuilt**), and Year of House after Remodeling (**YearRemodAdd**). This project will review the house from two sides, price and availability.
 
 ### House Price based on Overall Quality
 
@@ -224,11 +224,11 @@ TThe hypothesis $H_0$, known as the null hypothesis, assumes that there is no si
 <img width = 600 height = 400 src = "fig/pvalue_cat_features.png">
 </p>
 
-- Berdasarkan hasil ekplorasi, terdapat lima fitur kategorik, berdasarkan p-value,  yang dianggap tidak memiliki signifikansi terhadap harga rumah. Maka dari itu, beberapa fitur yang tidak insignifikan terhadap model perlu dihapus.
+- Based on the exploration results, five categorical features, based on their p-value, were deemed insignificant to house prices. Therefore, several features that were insignificant to the model needed to be removed.
 
 ## Feature Engineering
 
-Pembahasan di subbab ini meliputi permasalahan yang ada di dalam data seperti null value, skewness, dan duplication. 
+The discussion in this sub-chapter covers problems that exist in data such as null values, skewness, and duplication.
 
 ### Null Value
 
@@ -301,9 +301,9 @@ After we analyze the data, the result we get:
 
 1. Based on *Root Mean Square Error*, the score we get is around $0.3$. It means that the machine learning is accurate enough to predict the rest of the house price.
 
-2. From the EDA step ([See Appendix B](#appendix-b-visualization)), the majority of the house is built in range of 1800s and 1900s, have 4 rooms (including living room), garage, no pool, and average quality. However, some of the house built in 1900s and 2000s prices is slight expensive. Overall, whenever these houses were built, most of them were sold in fairly good quality.
+2. From the EDA step ([See Appendix B](#appendix-b-visualization)), The majority of homes were built between the 1900s and 2010s, typically featuring four rooms, a quite spacious garage cars, a lot of rooms, and several bathroom features. Notably, homes built in the 2000s tend to fetch slightly higher prices. Regardless of build year, most properties were sold in decent quailty.
 
-3. Based on the distribution plot, the range price for most house of Iowa real estate is between $100.000 and $200.000. The homeowner candidate need at least $150.000 to purchase the average house (not including tax or another additional bill).   
+3. Based on the model prediction, the range price for most house of Iowa real estate is between $100.000 and $200.000 (not including tax or another additional bill).   
 
 ### Recommendation
 
